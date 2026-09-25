@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#17152b">
+    <title>Run For Kak Vanes 💫</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- START SCREEN -->
+        <section id="startScreen" class="screen active">
+            <div class="start-card">
+                <div class="logo-icon">💫</div>
+
+                <h1>RUN FOR<br>KAK VANES</h1>
+
+                <p class="subtitle">
+                    Seberapa jauh kamu bisa berlari sebelum mendapatkan pujian berikutnya?
+                </p>
+
+                <button id="startButton" class="main-button">
+                    START GAME
+                </button>
+
+                <div class="controls-info">
+                    <span>SPACE / ↑ / TAP</span>
+                    <small>= LOMPAT</small>
+                </div>
+
+                <div class="best-score">
+                    HIGH SCORE:
+                    <strong id="startHighScore">000000</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- GAME -->
+        <section id="gameScreen" class="game-screen">
+
+            <canvas id="gameCanvas"></canvas>
+
+            <div class="hud">
+                <div class="score-box">
+                    <span>SCORE</span>
+                    <strong id="scoreText">000000</strong>
+                </div>
+
+                <div class="high-score-box">
+                    <span>HIGH SCORE</span>
+                    <strong id="highScoreText">000000</strong>
+                </div>
+
+                <div class="hud-buttons">
+                    <button id="muteButton" class="hud-button" aria-label="Mute">
+                        🔊
+                    </button>
+
+                    <button id="pauseButton" class="hud-button" aria-label="Pause">
+                        ⏸
+                    </button>
+                </div>
+            </div>
+
+            <div id="milestoneMessage" class="milestone-message"></div>
+
+            <div id="pauseOverlay" class="overlay">
+                <div class="overlay-card">
+                    <div class="overlay-icon">⏸️</div>
+                    <h2>GAME PAUSED</h2>
+                    <p>Tekan P atau tombol di bawah untuk melanjutkan.</p>
+
+                    <button id="resumeButton" class="main-button">
+                        LANJUTKAN
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- GAME OVER -->
+        <section id="gameOverScreen" class="screen">
+
+            <div class="game-over-card">
+
+                <div id="gameOverIcon" class="game-over-icon">
+                    ✨
+                </div>
+
+                <h2>GAME OVER</h2>
+
+                <p class="praise-label">
+                    Pujian untuk Kak Vanes hari ini:
+                </p>
+
+                <div id="praiseText" class="praise-text">
+                    Game boleh berakhir, tapi Kak Vanes tetap juara.
+                </div>
+
+                <div class="result-score">
+                    <div>
+                        <span>SCORE</span>
+                        <strong id="finalScore">000000</strong>
+                    </div>
+
+                    <div>
+                        <span>HIGH SCORE</span>
+                        <strong id="finalHighScore">000000</strong>
+                    </div>
+                </div>
+
+                <div class="game-over-buttons">
+                    <button id="restartButton" class="main-button">
+                        MAIN LAGI
+                    </button>
+
+                    <button id="anotherPraiseButton" class="secondary-button">
+                        PUJIAN LAIN ❤️
+                    </button>
+                </div>
+
+                <p id="praiseCounter" class="praise-counter"></p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
